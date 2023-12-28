@@ -3,10 +3,16 @@ import { AiFillAudio } from 'react-icons/ai'
 import { FaVideo } from 'react-icons/fa6'
 import { IoDocumentTextSharp } from 'react-icons/io5'
 
-const Categories = async() => {
-  const URL = 'http://localhost:5001/api/vi/count/:type'
-  const res = await fetch(URL);
-  const data: Data[] = await res.json();
+const Categories = async () => {
+  const documentURL = 'http://localhost:5001/api/vi/files/count/document';
+  const audioURL = 'http://localhost:5001/api/vi/files/count/audio'
+  const videoURL = 'http://localhost:5001/api/vi/files/count/video'
+  const imageURL = 'http://localhost:5001/api/vi/files/count/image'
+  
+  const res = await fetch(documentURL);
+  const result = await res.json();
+  const { fileType, count } = result;
+  
 
   return (
     <div className="pt-5">
@@ -14,11 +20,8 @@ const Categories = async() => {
       <div className="flex flex-row gap-4 pt-7">
         <div className="p-5 rounded-lg text-white bg-fuchsia-500 ">
           <IoDocumentTextSharp />
-          <h3>Document</h3>
-          {data.map((data) => (
-            <p key={data.fileType}> {data.count} files</p>
-          ))}
-          
+          <h3>{fileType}</h3>
+          <p>{count} files</p>
         </div>
         <div className="p-5 rounded-lg text-white bg-yellow-500 ">
           <FaCamera />

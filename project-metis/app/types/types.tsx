@@ -3,5 +3,4 @@ interface Data {
     fileName: string
     fileType: string
     fileSize: string
-    count: number
   }
