@@ -1,12 +1,6 @@
 import { IoDocumentTextSharp } from 'react-icons/io5'
 import { FaDownload } from 'react-icons/fa'
 
-interface Data {
-  id: number
-  fileName: string
-  fileType: string
-  fileSize: string
-}
 
 const RecentFiles = async () => {
   const URL = 'http://localhost:5001/api/vi/files/recent'
@@ -15,6 +9,7 @@ const RecentFiles = async () => {
 
   return (
     <>
+    <h2 className="font-black text-blue-800 mb-10 ">Recent Files</h2>
       <div className="flex flex-col mt-2 p-2 rounded-md recent-files-list ">
         <ul>
           {data.map((data) => (
