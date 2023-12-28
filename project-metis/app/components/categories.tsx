@@ -6,7 +6,7 @@ import { IoDocumentTextSharp } from 'react-icons/io5'
 const Categories = async() => {
   const URL = 'http://localhost:5001/api/vi/count/:type'
   const res = await fetch(URL);
-  const data: Data [] = await res.json();
+  const data: Data[] = await res.json();
 
   return (
     <div className="pt-5">
