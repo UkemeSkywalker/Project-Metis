@@ -1,0 +1,41 @@
+# Dependency directories
+node_modules/
+
+# Generated files
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment variables file
+.env
+
+# Build files
+/build/
+/dist/
+/out/
+
+# Coverage directory used by tools like Istanbul
+/coverage/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# IDE and text editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Compiled binary addons (if your project uses native addons)
+/build/Release
+/build/Debug
